@@ -8,6 +8,8 @@ server.get('/teste', (req, res)=> {
   res.send('tudo certo com a api!!!!');
 });
 
+const categoriaRouter = require('./routers/categoria.router');
+server.use('/categoria',categoriaRouter);
 
 server.listen(3000, () => {
     console.log('API online');

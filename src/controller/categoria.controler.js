@@ -40,3 +40,5 @@ class CategoriaController {
             .catch(error => { return res.status(500).json(error) });
     }
 }
+
+module.exports = new CategoriaController();
