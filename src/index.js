@@ -9,7 +9,10 @@ server.get('/teste', (req, res)=> {
 });
 
 const categoriaRouter = require('./routers/categoria.router');
+const produtoRouter = require('./routers/produto.router');
+
 server.use('/categoria',categoriaRouter);
+server.use('/produto',produtoRouter);
 
 server.listen(3000, () => {
     console.log('API online');
