@@ -1,7 +1,10 @@
+import * as config from './appSettings.json'
+
+
 const mongoose = require('mongoose');
 
-const url = 'mongodb+srv://userLibras4All:estoque@cluster0.wfd3t.mongodb.net/ESTOQUE_DB?retryWrites=true&w=majority'
-mongoose.connect(url, {useNewUrlParser: true});
 
+const url = process.env.CUSTOMCONNSTR_connectionStringV2 || config.connectionStringV2;
+mongoose.connect(url, {useNewUrlParser: true});
 
 module.exports = mongoose;
