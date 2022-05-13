@@ -14,6 +14,6 @@ const produtoRouter = require('./routers/produto.router');
 server.use('/categoria',categoriaRouter);
 server.use('/produto',produtoRouter);
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('API online');
 });
